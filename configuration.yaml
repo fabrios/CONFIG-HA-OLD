@@ -1,0 +1,135 @@
+# ################################################################
+# Configure a default setup of Home Assistant (frontend, api, etc)
+# ################################################################
+default_config:
+
+
+# ################################################################
+# logger
+# ################################################################
+#logger:
+  #default: warn
+  #logs:
+    #pyShelly: debug
+    #custom_components.circadian_lighting: debug
+    #custom_components.sensor.circadian_lighting: debug
+    #custom_components.switch.circadian_lighting: debug
+    homeassistant.components.shell_command: debug
+
+# ################################################################
+# HTTPS/SSL and Dynamic DNS configuration
+# ################################################################
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  ip_ban_enabled: true
+  login_attempts_threshold: 3
+
+
+# ################################################################
+# includes
+# ################################################################
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+
+# ################################################################
+# haaska configuration (alexa bridge)
+# ################################################################
+api:
+alexa:
+  smart_home:
+    filter:
+      include_domains:
+        - light
+        - cover
+        - scene
+        - script
+      include_entities:
+        - input_boolean.circadien
+        - input_boolean.veille_circadien_bureau
+        - input_boolean.veille_circadien_sejour
+        - switch.cuisine
+        - switch.salon
+        - switch.escalier
+        - switch.couloir
+        - switch.plaque
+
+
+# ################################################################
+# Text to speech
+# ################################################################
+tts:
+  - platform: google_translate
+
+
+# ################################################################  
+# Shelly configuration
+# ################################################################
+shelly:
+  username: !secret shelly_username
+  password: !secret shelly_password
+
+
+# ################################################################
+# Circadian lighting configuration
+# ################################################################
+circadian_lighting:
+  max_colortemp: 6000
+  min_colortemp: 2700
+  interval: 300
+  transition: 90
+  
+switch:
+  - platform: circadian_lighting
+    name: "Circadien bureau"
+    lights_ct:
+      - light.sur_bureau
+    lights_brightness:
+      - light.bureau
+    min_brightness: 20
+    max_brightness: 100
+    sleep_entity: input_boolean.veille_circadien_bureau
+    sleep_state: "off"
+    sleep_colortemp: 5700
+    sleep_brightness: 100
+  - platform: circadian_lighting
+    name: "Circadien séjour"
+    lights_ct:
+      - light.canape
+      - light.salle_a_manger
+    min_brightness: 20
+    max_brightness: 100
+    sleep_entity: input_boolean.veille_circadien_sejour
+    sleep_state: "off"
+    sleep_colortemp: 5700
+    sleep_brightness: 100
+    
+    
+# ################################################################
+# Shell command
+# ################################################################
+# shell_command: !include configuration/shellcommand.yaml
+
+
+# ################################################################
+# HomeKit Bridge
+# ################################################################
+homekit:
+  filter:
+    include_domains:
+      - light
+      - cover
+      - scene
+      - script
+    include_entities:
+        - input_boolean.circadien
+        - input_boolean.veille_circadien_bureau
+        - input_boolean.veille_circadien_sejour
+        - switch.cuisine
+        - switch.salon
+        - switch.escalier
+        - switch.couloir
+        - switch.plaque

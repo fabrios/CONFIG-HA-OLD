@@ -1,0 +1,72 @@
+- id: '1607984120896'
+  name: Moment coquin
+  entities:
+    light.sur_bureau:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 30
+      color_temp: 370
+      shelly_type: Shelly Duo
+      shelly_id: '664819'
+      ip_address: 192.168.0.127
+      protocols:
+      - CoAP-msg
+      - poll
+      - CoAP-discovery
+      has_firmware_update: false
+      cloud_status: disabled
+      total_consumption: 0.15 kWh
+      friendly_name: Lampe sur le bureau
+      supported_features: 3
+      state: 'on'
+    light.bureau:
+      brightness: 25
+      shelly_type: Shelly Dimmer 2
+      shelly_id: 483FDA91A35B
+      ip_address: 192.168.0.126
+      protocols:
+      - CoAP-msg
+      - poll
+      - CoAP-discovery
+      over_temp: false
+      has_firmware_update: false
+      cloud_status: disabled
+      switch_1: true
+      switch_2: false
+      friendly_name: Lampe du bureau
+      supported_features: 1
+      state: 'on'
+    light.salle_a_manger:
+      min_mireds: 153
+      max_mireds: 370
+      shelly_type: Shelly Duo
+      shelly_id: 664CB0
+      ip_address: 192.168.0.122
+      protocols:
+      - CoAP-msg
+      - poll
+      - CoAP-discovery
+      has_firmware_update: false
+      cloud_status: disabled
+      total_consumption: 0.02 kWh
+      friendly_name: Lampe de la salle à manger
+      supported_features: 3
+      state: 'off'
+    light.canape:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 35
+      color_temp: 370
+      shelly_type: Shelly Duo
+      shelly_id: D0D5E6
+      ip_address: 192.168.0.121
+      protocols:
+      - CoAP-msg
+      - poll
+      - CoAP-discovery
+      has_firmware_update: false
+      cloud_status: disabled
+      total_consumption: 0.37 kWh
+      friendly_name: Lampe du canapé
+      supported_features: 3
+      state: 'on'

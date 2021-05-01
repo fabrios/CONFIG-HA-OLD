@@ -1,0 +1,23 @@
+# Example .gitignore file for your config dir.
+# https://diy-smarthome.com/how-to-set-up-git-to-version-control-your-home-assistant-configuration/
+
+# A * ensures that everything will be ignored.
+*
+
+# You can whitelist files/folders with !, these will not be ignored.
+!*.yaml
+!.gitignore
+!*.md
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+.vscode
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+*.log
+*.db
