@@ -3,7 +3,7 @@ cache: pip
 python:
   - "3.5"
 install:
-  - "pip3 install homeassistant"
+  - "pip install homeassistant"
 script:
   - "mv secrets.yaml.sample secrets.yaml"
   - "touch fullchain.pem"
