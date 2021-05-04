@@ -10,7 +10,8 @@
 !*.md
 !*.yml
 !secrets.yaml.sample
-!*manifest.json
+!.shelly/manifest.json
+!.circadian_lighting/manifest.json
 
 # Ignore folders.
 .storage
