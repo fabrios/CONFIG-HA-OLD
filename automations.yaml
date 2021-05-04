@@ -1,6 +1,5 @@
 - id: '1608474626418'
   alias: Snapshot hebdomadaire
-  description: Création d'un snapshot tous les vendredis
   trigger:
   - platform: time
     at: 03:00:00
