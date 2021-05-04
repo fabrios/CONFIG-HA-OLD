@@ -13,6 +13,7 @@
 !custom_components
 !custom_components/shelly
 !custom_components/circadian_lighting
+!custom_components/circadian_lighting/*.py
 !*.json
 
 # Ignore folders.
