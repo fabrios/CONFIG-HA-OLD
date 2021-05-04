@@ -3,7 +3,9 @@ cache: pip
 python:
   - "3.5"
 install:
-  - "pip install homeassistant"
+  - pip install homeassistant
+  - git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting_component/
+  - mv circadian_lighting_component/custom_components ./custom_components
 script:
   - "mv secrets.yaml.sample secrets.yaml"
   - "mkdir ssl"
