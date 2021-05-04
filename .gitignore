@@ -9,6 +9,7 @@
 !.gitignore
 !*.md
 !*.yml
+!secrets.yaml.sample
 
 # Ignore folders.
 .storage
