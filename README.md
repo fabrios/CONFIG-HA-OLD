@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.com/fabrios/CONFIG-HA.svg?token=vQVU2FEcHxWNsBygkfPn&branch=master)](https://travis-ci.com/fabrios/CONFIG-HA)
