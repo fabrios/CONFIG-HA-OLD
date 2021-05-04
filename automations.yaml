@@ -11,4 +11,4 @@
     - service: hassio.snapshot_full
       data_template:
         name: 'weekly_backup_{{ now().strftime(''%Y-%m-%d'') }}'
-  mode: single
+- mode: single
