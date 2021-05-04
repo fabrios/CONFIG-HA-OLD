@@ -15,5 +15,7 @@ script:
   - "touch ssl/privkey.pem"
   - "hass --version"
   - "ls"
+  - "cd custom_components && ls -al"
+  - "cd .."
   - "hass -c $(pwd) --script check_config | tee check.output"
   - '! less check.output | grep -q "Failed config"' 
