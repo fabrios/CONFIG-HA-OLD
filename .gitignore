@@ -10,6 +10,7 @@
 !*.md
 !*.yml
 !secrets.yaml.sample
+!*manifest.json
 
 # Ignore folders.
 .storage
