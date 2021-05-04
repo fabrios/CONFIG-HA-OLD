@@ -7,8 +7,8 @@ install:
 script:
   - "mv secrets.yaml.sample secrets.yaml"
   - "mkdir ssl && cd ssl"
-  - "touch /ssl/fullchain.pem"
-  - "touch /ssl/privkey.pem"
+  - "touch fullchain.pem"
+  - "touch privkey.pem"
   - "hass --version"
   - "ls"
   - "hass -c $(pwd) --script check_config | tee check.output"
