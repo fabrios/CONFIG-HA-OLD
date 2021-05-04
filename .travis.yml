@@ -3,7 +3,7 @@ cache: pip
 python:
   - "3.5"
 install:
-  - pip install homeassistant
+  - pip3 install homeassistant
   - git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting_component/
   - mv circadian_lighting_component/custom_components ./custom_components
   - git clone https://github.com/StyraHem/ShellyForHASS.git shelly_component/
@@ -16,4 +16,4 @@ script:
   - "hass --version"
   - "ls"
   - "hass -c $(pwd) --script check_config | tee check.output"
-  - '! less check.output | grep -q "Failed config"'
+  - '! less check.output | grep -q "Failed config"' 
