@@ -1,16 +1,14 @@
 - id: '1608474626418'
   alias: Snapshot hebdomadaire
   trigger:
-  - platform: time
-    at: 03:00:00
+    - platform: time
+      at: 03:00:00
   condition:
-  - condition: time
-    weekday:
-    - sat
+    - condition: time
+      weekday:
+      - sat
   action:
-  - service: hassio.snapshot_full
-    data_template:
-      name: 'weekly_backup_{{ now().strftime(''%Y-%m-%d'') }}
-
-        '
+    - service: hassio.snapshot_full
+      data_template:
+        name: 'weekly_backup_{{ now().strftime(''%Y-%m-%d'') }}'
   mode: single
