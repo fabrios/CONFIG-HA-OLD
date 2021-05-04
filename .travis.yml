@@ -4,6 +4,7 @@ python:
   - "3.5"
 before_install:
   - "mv secrets.yaml.sample secrets.yaml"
+  - "mkdir /ssl"
   - "touch /ssl/fullchain.pem"
   - "touch /ssl/privkey.pem"
 install:
