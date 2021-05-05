@@ -21,7 +21,6 @@ install:
   - git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting_component
   - mv circadian_lighting_component/custom_components custom_components
   - git clone https://github.com/StyraHem/ShellyForHASS.git shelly_component
-  #- mv shelly_component/custom_components custom_components
   - pwd
   - ls -al 
   - cd shelly_component
@@ -31,6 +30,14 @@ install:
   - pwd
   - ls -al
   - cd ../.. 
+  - mv shelly_component/custom_components/* custom_components
+  - cd custom_components
+  - pwd
+  - ls -al
+  - cd shelly
+  - pwd
+  - ls -al
+  - cd ../..
 
 script:
   - "pwd"
