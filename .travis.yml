@@ -37,6 +37,8 @@ install:
   - cd shelly
   - pwd
   - ls -al
+  - rm __init__.py
+  - touch __init__.py
   - cd ../..
 
 script:
