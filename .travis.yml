@@ -22,7 +22,15 @@ install:
   - mv circadian_lighting_component/custom_components custom_components
   - git clone https://github.com/StyraHem/ShellyForHASS.git shelly_component
   - mv shelly_component/custom_components custom_components
-  - pwd && ls -al && cd shelly_component && pwd && ls -al && cd custom_components && pwd && ls -al && cd ../.. 
+  - pwd
+  - ls -al 
+  - cd shelly_component
+  - pwd 
+  - ls -al
+  - cd custom_components
+  - pwd
+  - ls -al
+  - cd ../.. 
 
 script:
   - "pwd"
