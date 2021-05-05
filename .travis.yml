@@ -21,33 +21,12 @@ install:
   - git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting_component
   - mv circadian_lighting_component/custom_components custom_components
   - git clone https://github.com/StyraHem/ShellyForHASS.git shelly_component
-  - pwd
-  - ls -al 
-  - cd shelly_component
-  - pwd 
-  - ls -al
-  - cd custom_components
-  - pwd
-  - ls -al
-  - cd ../.. 
   - mv shelly_component/custom_components/* custom_components
-  - cd custom_components
-  - pwd
-  - ls -al
-  - cd shelly
-  - pwd
-  - ls -al
-  - rm __init__.py
-  - touch __init__.py
-  - cd ../..
+  - rm custom_components/shelly/__init__.py
+  - touch custom_components/shelly/__init__.py
 
-script:
-  - "pwd"
-  - "whoami"
+script: 
   - "hass --version"
   - "ls"
-  - "cd custom_components && ls -al"
-  - "cd shelly && ls -al"
-  - "cd ../.."
   - "hass -c $(pwd) --script check_config | tee check.output"
   - '! less check.output | grep -q "Failed config"' 
