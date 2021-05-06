@@ -38,7 +38,6 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-ha_ci: !include ha_ci.yaml
 
 
 # ################################################################
