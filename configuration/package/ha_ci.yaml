@@ -1,3 +1,4 @@
+ha_ci:
   sensor:
     - platform: rest
       resource: https://travis-ci.com/github/fabrios/CONFIG-HA/builds
