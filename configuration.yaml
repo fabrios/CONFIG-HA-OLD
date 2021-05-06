@@ -20,7 +20,7 @@ homeassistant:
     #custom_components.circadian_lighting: debug
     #custom_components.sensor.circadian_lighting: debug
     #custom_components.switch.circadian_lighting: debug
-    homeassistant.components.shell_command: debug
+    #homeassistant.components.shell_command: debug
 
 # ################################################################
 # HTTPS/SSL and Dynamic DNS configuration

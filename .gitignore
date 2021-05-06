@@ -10,7 +10,8 @@
 !*.md
 !*.yml
 !secrets.yaml.sample
-!configuration/package
+!.configuration
+!.configuration/package
 
 # Ignore folders.
 .storage
