@@ -12,6 +12,7 @@
 !secrets.yaml.sample
 !configuration
 !configuration/package
+!configuration/shell
 
 # Ignore folders.
 .storage
