@@ -10,11 +10,7 @@
 !*.md
 !*.yml
 !secrets.yaml.sample
-# !custom_components
-# !custom_components/shelly
-# !custom_components/circadian_lighting
-# !custom_components/circadian_lighting/*.py
-# !*.json
+!configuration/package
 
 # Ignore folders.
 .storage
