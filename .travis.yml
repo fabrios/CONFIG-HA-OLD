@@ -27,6 +27,7 @@ install:
 
 script: 
   - "hass --version"
+  - "pwd"
   - "ls"
   - "hass -c $(pwd) --script check_config | tee check.output"
   - '! less check.output | grep -q "Failed config"' 
