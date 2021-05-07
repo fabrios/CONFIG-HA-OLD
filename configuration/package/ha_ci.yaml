@@ -4,7 +4,7 @@ ha_ci:
       resource: https://api.travis-ci.com/repos/fabrios/CONFIG-HA/builds
       headers:
         Accept: application/vnd.travis-ci.2+json
-        Authorization: token !secret travis_api_key
+        Authorization: !secret travis_api_key
       value_template: "{{ value_json.builds[0].state }}"
       name: "Travis Build Status"
 
